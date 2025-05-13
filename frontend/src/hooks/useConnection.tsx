@@ -31,7 +31,8 @@ export const ConnectionProvider = ({
     if (!process.env.NEXT_PUBLIC_LIVEKIT_URL) {
       throw new Error("NEXT_PUBLIC_LIVEKIT_URL is not set");
     }
-    url = process.env.NEXT_PUBLIC_LIVEKIT_URL;
+    //url = process.env.NEXT_PUBLIC_LIVEKIT_URL;
+    url = "wss://livekit.ahoum.com";
     const { accessToken } = await fetch("/api/token").then((res) => res.json());
     token = accessToken;
     setConnectionDetails({ wsUrl: url, token, shouldConnect: true });
