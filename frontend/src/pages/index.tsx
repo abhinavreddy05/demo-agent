@@ -44,30 +44,17 @@ export function HomeInner() {
         <meta name="description" content={description} />
         <meta name="og:title" content={title} />
         <meta name="og:description" content={description} />
-        <meta
-          property="og:image"
-          content="https://cartesia-assistant.vercel.app/og.png"
-        />
-        <meta name="twitter:site" content="@LiveKit"></meta>
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta
-          property="twitter:image"
-          content="https://cartesia-assistant.vercel.app/og.png"
-        />
-        <meta property="twitter:image:width" content="1600" />
-        <meta property="twitter:image:height" content="836" />
+        
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
         />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <meta property="og:image:width" content="1600" />
-        <meta property="og:image:height" content="836" />
+        
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
       <main
         className={`relative flex overflow-x-hidden flex-col justify-center items-center h-full w-full bg-background repeating-square-background`}
       >
