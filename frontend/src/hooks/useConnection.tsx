@@ -28,9 +28,9 @@ export const ConnectionProvider = ({
   const connect = useCallback(async () => {
     let token = "";
     let url = "";
-    if (!process.env.NEXT_PUBLIC_LIVEKIT_URL) {
-      throw new Error("NEXT_PUBLIC_LIVEKIT_URL is not set");
-    }
+    // if (!process.env.NEXT_PUBLIC_LIVEKIT_URL) {
+    //   throw new Error("NEXT_PUBLIC_LIVEKIT_URL is not set");
+    // }
     //url = process.env.NEXT_PUBLIC_LIVEKIT_URL;
     url = "wss://livekit.ahoum.com";
     const { accessToken } = await fetch("/api/token").then((res) => res.json());
