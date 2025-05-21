@@ -14,6 +14,8 @@ from dataclasses import dataclass
 
 load_dotenv()
 
+ROOM_NAME = "ahoum-test-room"
+
 class Assistant(Agent):
     def __init__(self) -> None:
         super().__init__(instructions="""
@@ -112,7 +114,7 @@ async def entrypoint(ctx: agents.JobContext):
     )
 
     await session.start(
-        room=ctx.room,
+        room=ROOM_NAME,
         agent=Assistant(),
         room_input_options=RoomInputOptions(
             # LiveKit Cloud enhanced noise cancellation
