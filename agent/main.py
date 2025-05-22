@@ -1,4 +1,6 @@
 from dotenv import load_dotenv
+import sys
+import os
 
 from livekit import agents
 from livekit.agents import AgentSession, Agent, RoomInputOptions, function_tool, RunContext
@@ -14,7 +16,8 @@ from dataclasses import dataclass
 
 load_dotenv()
 
-ROOM_NAME = "ahoum-test-room"
+# Determine room name from first CLI arg or environment, default to demo room
+ROOM_NAME = sys.argv[1] if len(sys.argv) > 1 else os.getenv('ROOM_NAME', 'ahoum-test-room')
 
 class Assistant(Agent):
     def __init__(self) -> None:
