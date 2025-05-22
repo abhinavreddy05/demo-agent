@@ -97,11 +97,11 @@ async def entrypoint(ctx: agents.JobContext):
             language="en",
         ),
         llm=groq.LLM(model="gemma2-9b-it"),
-        # tts=groq.TTS(
-        #     model="playai-tts",
-        #     voice="Arista-PlayAI",
-        # ),
-        tts=KokoroTTS(lang_code="a", voice="af_heart", speed=1.0, sample_rate=24000),
+        tts=groq.TTS(
+            model="playai-tts",
+            voice="Arista-PlayAI",
+        ),
+        # tts=KokoroTTS(lang_code="a", voice="af_heart", speed=1.0, sample_rate=24000),
         vad=silero.VAD.load(),
         turn_detection=MultilingualModel(),
     )
